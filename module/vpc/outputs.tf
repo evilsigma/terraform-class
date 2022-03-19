@@ -1,0 +1,1 @@
+//vamos a definir las salidas de nuestra plantilla
