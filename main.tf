@@ -18,3 +18,11 @@ module "natgateway" {
   rt_private01 = module.vpc.rt_private_01
   rt_private02 = module.vpc.rt_private_02
 }
+
+module "ec2" {
+  source = "./module/ec2"
+  proy = var.proy
+  env = var.env
+  instance_type = "t2.micro"
+}
+
