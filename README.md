@@ -7,3 +7,7 @@ Creación de Subnets.
 Creación de tablas de rutas.
 Creación de internet gateway.
 Creación de asociación de tabla de rutas.
+
+# Update Clase 19/03/2022
+
+Creación de NatGateway

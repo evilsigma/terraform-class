@@ -6,10 +6,12 @@ variable "cidr" {
 
 variable "env" {
   type = string
+  default = "dev"
 }
 
 variable "proy" {
   type = string
+  default = "chatbot"
 }
 
 variable "cidr_public01" {

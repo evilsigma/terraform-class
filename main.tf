@@ -15,4 +15,6 @@ module "natgateway" {
   subnet_id = module.vpc.subnet_id_nat
   proy = var.proy
   env = var.env
+  rt_private01 = module.vpc.rt_private_01
+  rt_private02 = module.vpc.rt_private_02
 }
