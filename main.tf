@@ -26,3 +26,12 @@ module "ec2" {
   instance_type = "t2.micro"
 }
 
+
+
+module "nlb" {
+  source = "./module/nlb"
+  proy = var.proy
+  env = var.env
+  instance_id = module.ec2.instance_id
+}
+
