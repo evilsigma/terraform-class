@@ -83,6 +83,14 @@ resource "aws_security_group" "sg_bastion" {
     cidr_blocks      = [data.aws_vpc.this.cidr_block]
   }
 
+   ingress {
+    description      = "80 desde VPC"
+    from_port        = 80
+    to_port          = 80
+    protocol         = "tcp"
+    cidr_blocks      =  ["0.0.0.0/0"]
+  }
+
 
   egress {
     from_port        = 0

@@ -5,7 +5,3 @@ variable "env" {
 variable "proy" {
   type = string
 }
-
-variable "instance_id" {
-  type = string
-}

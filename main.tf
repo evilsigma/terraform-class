@@ -18,7 +18,7 @@ module "natgateway" {
   rt_private01 = module.vpc.rt_private_01
   rt_private02 = module.vpc.rt_private_02
 }
-
+/*
 module "ec2" {
   source = "./module/ec2"
   proy = var.proy
@@ -26,12 +26,21 @@ module "ec2" {
   instance_type = "t2.micro"
 }
 
+*/
 
-
-module "nlb" {
-  source = "./module/nlb"
+module "alb" {
+  source = "./module/alb"
   proy = var.proy
   env = var.env
-  instance_id = module.ec2.instance_id
+}
+
+module "autoscaling" {
+  source = "./module/autoscaling"
+  proy = var.proy
+  env = var.env
+  tg_arn = module.alb.tg_arn
+  instance_type = "t2.micro"
+  ami_id = "ami-07c18ca7e2b653e25"
+  email = "vahumada24@gmail.com"
 }
 
