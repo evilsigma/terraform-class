@@ -44,3 +44,10 @@ module "autoscaling" {
   email = "vahumada24@gmail.com"
 }
 
+module "route53" {
+  source = "./module/route53"
+  proy = var.proy
+  env = var.env
+  dns_name = "vahumada.per"
+}
+
