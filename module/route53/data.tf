@@ -19,3 +19,8 @@ data "aws_subnet" "subnet_publica" {
         Name = "sn-ue1-${var.proy}-${var.env}-public01"
     }
 }
+
+
+data "aws_lb" "this" {
+  name = "alb-ue1-${var.proy}-${var.env}-01"
+}
